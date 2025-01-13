@@ -1,0 +1,12 @@
+.card {
+  height: 300px;
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+  img {
+    height: 50%;
+    width: 50%;
+    border: 1px solid black;
+  }
+}
