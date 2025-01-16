@@ -1,4 +1,4 @@
-const Books = (bookData) => {
+const BookCard = (bookData) => {
   return (
     <>
       <article className={classes.books}>
@@ -11,4 +11,4 @@ const Books = (bookData) => {
   );
 };
 
-export default Books;
+export default BookCard;
