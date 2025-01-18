@@ -1,22 +1,39 @@
 import classes from "./Modal.module.scss";
 
 const Modal = ({ selectedBook, onClose }) => {
+  const authors = selectedBook.author;
+  console.log(authors);
   return (
     <div className={classes.modal}>
-      <article>
-        <span onClick={onClose}>&times;</span>
-        <h3>{selectedBook.title}</h3>
-        <h4>{selectedBook.authors}</h4>
-        {selectedBook.image && (
-          <img src={selectedBook.image} alt={selectedBook.title} />
-        )}
-        <h5>Publish Date</h5>
-        <p>{selectedBook.publishedDate}</p>
-        <h5>Language</h5>
+      <article className={classes.modal_content}>
+        <span className={classes.close} onClick={onClose}>
+          &times;
+        </span>
 
-        <p>{selectedBook.language}</p>
-        <h5>Description</h5>
-        <p>{selectedBook.description}</p>
+        <div className={classes.modal_content_main}>
+          {selectedBook.image && (
+            <img
+              className={classes.modal_image}
+              src={selectedBook.image}
+              alt={selectedBook.title}
+            />
+          )}
+          <div className={classes.modal_content_text}>
+            <h3>{selectedBook.title}</h3>
+
+            <h4>Authors</h4>
+            {authors.map((author, i) => (
+              <span key={i}>{author}</span>
+            ))}
+            <h4>Publish Date</h4>
+            <p>{selectedBook.publishedDate}</p>
+            <h4>Language</h4>
+
+            <p>{selectedBook.language}</p>
+            <h4>Description</h4>
+            <p>{selectedBook.description}</p>
+          </div>
+        </div>
       </article>
     </div>
   );
