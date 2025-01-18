@@ -1,0 +1,31 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 20px;
+  width: 100%;
+  align-items: center;
+}
+
+.search_bar {
+  width: 300px;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+
+.search_button {
+  padding: 10px 20px;
+  background-color: #fff;
+  border: 2px solid black;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  width: auto;
+}
+
+.search_button:hover {
+  background-color: #aeb3b6;
+  color: rgb(3, 0, 0);
+}
