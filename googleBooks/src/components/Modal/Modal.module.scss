@@ -27,10 +27,6 @@
   max-height: 99%;
 }
 
-// .modal_content h3 {
-//   text-align: center;
-// }
-
 .modal_content_main {
   display: flex;
   justify-content: space-between; /*space between 2 divs img and text*/
@@ -46,7 +42,6 @@
 /* Image inside the modal */
 .modal_image {
   max-width: 300px;
-  margin-bottom: 20px;
   width: 30%;
 }
 

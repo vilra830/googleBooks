@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
-import { searchBook } from "../../data/googleBooks";
+import { searchBook } from "../../data/googleBooks.js";
 import BookCard from "../../components/Books/BookCard";
 import classes from "./BookDetails.module.scss";
 import Modal from "../../components/Modal/Modal";
+import Loading from "../../components/Loading/Loading.jsx";
 
 const BooksDetails = ({ value }) => {
-  const [data, setData] = useState(null);
+  const [data, setData] = useState("");
   const [fetchStatus, setFetchStatus] = useState("PENDING");
   const [error, setError] = useState(null);
   const [selectedBook, setSelectedBook] = useState([]);
@@ -46,11 +47,17 @@ const BooksDetails = ({ value }) => {
   };
 
   return (
-    <div className={classes.wrapper}>
-      {fetchStatus === "LOADING" && <p>Loading...</p>}
-      {fetchStatus === "FAILURE" && <p>{error.message}</p>}
+    <div>
+      {fetchStatus === "LOADING" && (
+        <p>
+          <Loading />
+        </p>
+      )}
+      {fetchStatus === "FAILURE" && (
+        <p className={classes.error}>{error.message}</p>
+      )}
       {fetchStatus === "SUCCESS" && (
-        <div>
+        <div className={classes.wrapper}>
           {data.map((book) => (
             <BookCard
               key={book.id}

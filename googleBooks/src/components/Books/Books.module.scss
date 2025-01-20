@@ -11,15 +11,44 @@
   gap: 0.5em;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
+  color: #242424;
 
   &:hover {
-    transform: translateY(-5px);
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   }
+}
 
-  img {
-    height: 100%;
-    width: 50%;
-    border: 1px solid whitesmoke;
-    border-radius: 5px;
+.img {
+  width: 50%;
+  border: 1px solid whitesmoke;
+  border-radius: 5px;
+}
+
+.h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.h4 {
+  font-size: 1rem;
+  color: #777;
+  margin-bottom: 12px;
+}
+
+.p {
+  font-size: 0.9rem;
+  color: #555;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+@media (max-width: 768) {
+  .card {
+    width: 90%;
+    margin: 0 auto;
   }
 }
