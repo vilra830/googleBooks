@@ -20,21 +20,22 @@ const Form = ({ onSubmit }) => {
   console.log(inputVal, "is the input");
 
   return (
-    <div className={classes.wrapper}>
+    <>
       <Header />
+      <div className={classes.wrapper}>
+        <form onSubmit={handleSubmit}>
+          <input
+            className={classes.search_bar}
+            type="text"
+            name="searchInput"
+            value={inputVal}
+            onChange={handleChange}
+          />
 
-      <form onSubmit={handleSubmit}>
-        <input
-          className={classes.search_bar}
-          type="text"
-          name="searchInput"
-          value={inputVal}
-          onChange={handleChange}
-        />
-
-        <button className={classes.search_button}>Search</button>
-      </form>
-    </div>
+          <button className={classes.search_button}>Search</button>
+        </form>
+      </div>
+    </>
   );
 };
 

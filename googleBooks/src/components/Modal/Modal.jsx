@@ -31,7 +31,9 @@ const Modal = ({ selectedBook, onClose }) => {
 
             <p>{selectedBook.language}</p>
             <h4>Description</h4>
-            <p>{selectedBook.description}</p>
+            <p className={classes.modal_content_text_description}>
+              {selectedBook.description}
+            </p>
           </div>
         </div>
       </article>
