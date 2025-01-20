@@ -20,7 +20,7 @@ const Form = ({ onSubmit }) => {
 
   return (
     <div className={classes.wrapper}>
-      <h1> Google Books </h1>
+      <h1 className={classes.h1}> Google Books </h1>
       <form onSubmit={handleSubmit}>
         <input
           className={classes.search_bar}

@@ -7,6 +7,7 @@ function App() {
 
   const onFormSubmit = (data) => {
     setValue(data);
+    console.log("WHAT IS THE DATA", data);
   };
 
   return (

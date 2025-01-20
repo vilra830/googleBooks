@@ -7,16 +7,25 @@ const BookCard = ({ bookData, onClick }) => {
   return (
     <>
       <article className={classes.card}>
-        <h3>{bookData.title}</h3>
+        <h3 className={classes.h3}>{bookData.title}</h3>
 
-        <img src={bookData.image} alt={bookData.title} onClick={onClick} />
-        <h4>Authors</h4>
+        <img
+          className={classes.img}
+          src={bookData.image}
+          alt={bookData.title}
+          onClick={onClick}
+        />
+        <h4 className={classes.h4}>Authors</h4>
         {authors.map((author, i) => (
-          <p key={i}>{author}</p>
+          <p className={classes.p} key={i}>
+            {author}
+          </p>
         ))}
-        <h4>Categories</h4>
+        <h4 className={classes.h4}>Categories</h4>
         {categories.map((category, i) => (
-          <p key={i}>{category}</p>
+          <p className={classes.p} key={i}>
+            {category}
+          </p>
         ))}
         {/* <p>{bookData.description}</p> */}
       </article>
