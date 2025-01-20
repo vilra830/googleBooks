@@ -8,7 +8,7 @@
 }
 
 .search_bar {
-  width: 400px;
+  width: 350px;
   padding: 10px;
   border-radius: 5px;
   margin-bottom: 20px;
@@ -38,14 +38,10 @@
   box-shadow: 0 0 5px rgba(52, 152, 219, 0.7); /* Glow effect on focus */
 }
 .search_button:active {
-  background-color: #c1c7cc; /* Lighter background when clicked */
-  border: 2px solid #999; /* Darker border when clicked */
-  transform: scale(0.95); /* Slight shrink effect when clicked */
-  box-shadow: none; /* Remove box-shadow on click for a pressed effect */
-}
-
-.h1 {
-  text-align: center;
+  background-color: #c1c7cc;
+  border: 2px solid #999;
+  transform: scale(0.95);
+  box-shadow: none;
 }
 
 @media (max-width: 768px) {
