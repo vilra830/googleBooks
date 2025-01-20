@@ -17,15 +17,16 @@ It is a single page application that allows users to search for books using the 
 
 ## Build Steps
 
-- how to build / run project
-- use proper code snippets if there are any commands to run
+1. Clone project using git clone
+2. In git bash, cd into the project and type in npm install
+3. Type npm run dev to
+4. Click on the link or copy and paste it in the browser
 
 ---
 
 ## Design Goals / Approach
 
-- Design goals
-- why did you implement this the way you did?
+Google Books is composed of 4 components, 1 container and a service and the parent app. It starts with a user interaction in the form component where a user keys in a search term. This term is stored in a state is passed into the parent component, App.jsx. The parent then passes the data to BookDetails. This data is then queried using the service googleBooks.js where it fetches filtered data using the search term. The service either returns an error or the data. While waiting, BookDetails renders the Loading component to update user the app is still searching. If there is an error, the error message will be rendered, otherwise, BookCard is. Each bookCard component has a clickable cover image where if clicked, a modal is open to show more details about each book.
 
 ---
 
@@ -50,42 +51,18 @@ It is a single page application that allows users to search for books using the 
 
 ## Known issues
 
-- Remaining bugs, things that have been left unfixed
-- Features that are buggy / flimsy
+- The app is unable to throw an error when an empty string is keyed in. It throws an error an error when a space is keyed in though.
 
 ---
 
 ## Future Goals
 
-- What are the immediate features you'd add given more time
-
----
-
-## Change logs
-
-- Write a paragraph labelled with the date every day you work on the project to discuss what you've done for the say. Be specific about the changes that have happened for that day.
-
-### 13/02/2022 - {Theme of changes if applicable}
-
-- Extended the expiry time of JWT tokens on the backend
-- Added users to cohort response payload
-- Centralized API base URL on frontend using the proxy `package.json` property
+- A diagram will be added to show how the components interact with each other.
+- More styling should be done to improve the appearance, responsiveness of the elements.
 
 ---
 
 ## What did you struggle with?
 
-- What? Why? How?
-
----
-
-## Licensing Details
-
-- What type of license are you releasing this under?
-
----
-
-## Further details, related projects, reimplementations
-
-- Is this project a reimplementation for something you've done in the past? if so explain it and link it here.
-- If it's an API, is there a client app that works with this project? link it
+- Handling the no input error.
+- Styling.
