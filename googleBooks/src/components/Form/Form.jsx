@@ -24,6 +24,8 @@ const Form = ({ onSubmit }) => {
       <Header />
       <div className={classes.wrapper}>
         <form onSubmit={handleSubmit}>
+          <p>Please enter book name or an author you want to check out.</p>
+
           <input
             className={classes.search_bar}
             type="text"

@@ -46,12 +46,13 @@
 
 @media (max-width: 768px) {
   .search_bar {
-    width: 90%;
-    max-width: 300px;
+    width: 100%;
+    max-width: auto;
   }
 
   .search_button {
-    width: 90%;
-    max-width: 300px;
+    width: 50%;
+    max-width: auto;
+    margin-left: 25%;
   }
 }
