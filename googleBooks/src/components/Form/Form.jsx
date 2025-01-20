@@ -1,5 +1,6 @@
 import { useState } from "react";
 import classes from "./Form.module.scss";
+import Header from "../Header/Header";
 
 const Form = ({ onSubmit }) => {
   const [inputVal, setInputVal] = useState("");
@@ -20,7 +21,8 @@ const Form = ({ onSubmit }) => {
 
   return (
     <div className={classes.wrapper}>
-      <h1 className={classes.h1}> Google Books </h1>
+      <Header />
+
       <form onSubmit={handleSubmit}>
         <input
           className={classes.search_bar}

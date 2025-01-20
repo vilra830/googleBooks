@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { searchBook } from "../../data/googleBooks.js";
+import { searchBook } from "../../services/googleBooks.js";
 import BookCard from "../../components/Books/BookCard";
 import classes from "./BookDetails.module.scss";
 import Modal from "../../components/Modal/Modal";

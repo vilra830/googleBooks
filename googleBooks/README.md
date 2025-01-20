@@ -17,10 +17,10 @@ It is a single page application that allows users to search for books using the 
 
 ## Build Steps
 
-1. Clone project using git clone
+1. Clone project using the command: git clone git@github.com:vilra830/googleBooks.git
 2. In git bash, cd into the project and type in npm install
-3. Type npm run dev to
-4. Click on the link or copy and paste it in the browser
+3. Type npm run dev to run the app
+4. Click on the link http://localhost:5173/ or copy and paste it in the browser
 
 ---
 
